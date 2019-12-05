@@ -37,6 +37,11 @@ ul
 
 }
 
+.v-parallax__image
+    {
+        background-size: cover !important;
+    }
+
 .spans
 {
     font-family: 'Josefin Sans', sans-serif;
@@ -49,20 +54,22 @@ ul
 h4
 {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 34px;
     color: #848080;
+    word-break: keep-all;
 }
 
 h5
 {
     font-family: 'Josefin Sans', sans-serif;
     color: white;
+    word-break: keep-all;
 }
 
 h6
 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px !important;
+    word-break: keep-all;
 }
 
 p
@@ -106,7 +113,6 @@ p
 .h4white
 {
     color: white;
-    font-size: 34px;
 }
 
 .centers
@@ -140,6 +146,8 @@ p
     background-size: cover;
     max-height: 800px;
 }
+
+
 
 .placePriceCard
 {
@@ -199,10 +207,6 @@ p
 .arrows
 {
     font-size: 32px;
-}
-
-.coverIMG {
-    object-fit: contain;
 }
 
 
