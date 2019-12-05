@@ -1,0 +1,233 @@
+@font-face {
+font-family: caviarDreams;
+src: url("../fonts/CaviarDreams.ttf");
+}
+/** HomePage **/
+nav
+{
+    font-family:caviarDreams;
+}
+
+nav ul a
+{
+    color: #848080 !important;
+}
+
+ul li:last-child a
+{
+    background-color: #848080 !important;
+    color: white !important;
+}
+
+nav ul li
+{
+    margin-left: 15px;
+}
+
+ul
+{
+    margin-right: 140px !important;
+
+}
+
+.spans
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #707070;
+}
+
+
+h4
+{
+    font-family: CaviarDreams;
+    color: #848080;
+}
+
+h5
+{
+    font-family: CaviarDreams;
+    color: white;
+}
+
+h6
+{
+    font-family: CaviarDreams;
+    font-size: 20px !important;
+}
+
+p
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #707070;
+}
+
+.nav-wrapper
+{
+    background-color: white;
+}
+
+.brand-logo
+{
+    width: 155px;
+    margin: 2px 0 0 150px;
+ }
+.background-con
+{
+    background-color: white;
+}
+
+.vtitle
+{
+    padding-top: 0 !important;
+}
+.vrow
+{
+    margin: 0 !important;
+    background-color: #848080;
+}
+.vcard
+ {
+     background-color: #848080 !important;
+     color: white !important;
+ }
+
+.h4white
+{
+    color: white;
+}
+
+.centers
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footertext
+{
+    color: white;
+    text-align: center;
+}
+
+.icon
+{
+    height: 45px;
+    width: 45px;
+}
+.bar
+{
+    height: 25px;
+    width: 15px;
+}
+
+/** HomePage **/
+
+#imgPriceHerre
+{
+    background-size: cover;
+}
+
+#imgPriceDame
+{
+    background-size: cover    ;
+}
+
+
+.placePriceCard
+{
+    margin-top: 30px;
+}
+
+.priceTitle
+{
+    margin-left: 20px;
+}
+
+.pwhite
+{
+    color: white;
+    font-size: 18px;
+    margin: 0 0 0 20px !important;
+}
+
+.flex
+{
+    display: flex;
+}
+
+.DKK
+ {
+     text-align: right;
+ }
+
+.v-btn
+{
+    font-family: CaviarDreams;
+    color: #707070;
+}
+
+.placeTag
+{
+    text-align: center;
+}
+
+.nameTag
+{
+    margin-top: -25px;
+    background-color: #848080 !important;
+    color: white !important;
+    height: 36px;
+    width: 150px ;
+    border-radius: 0 !important;
+}
+
+.slideContainer
+{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.arrows
+{
+    font-size: 32px;
+}
+
+
+.mySlidesDisplay {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+@media only screen and (max-width: 960px)
+{
+    .brand-logo
+    {
+        margin: 5px 0;
+        width: 100px;
+    }
+    .pwhite
+    {
+        font-size: 12px;
+        margin: 0 0 0 0 !important;
+    }
+    h5
+    {
+        font-size: 24px !important;
+    }
+    div .v-dialog
+    {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 20% !important;
+    }
+}
+

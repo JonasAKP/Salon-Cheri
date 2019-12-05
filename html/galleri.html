@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salon Cheri</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">
+                        <img src="../assest/logo.svg" alt="">
+                    </a>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                        <li>
+                                    <v-btn
+
+                                           depressed
+                                           class="text-capitalize"
+                                           style="background-color: white"
+                                           href="index.html"
+                                    >
+                                        galleri
+                                    </v-btn>
+                        </li>
+                        <li>
+                                <v-menu offset-y>
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn text v-on="on"
+                                               depressed
+                                               class="text-capitalize"
+                                               style="background-color: white">
+                                            Priser
+                                        </v-btn>
+                                    </template>
+                                    <v-list>
+                                        <v-list-item>
+                                            <v-btn
+                                                   depressed
+                                                   class="text-capitalize"
+                                                   style="background-color: white"
+                                                   href="html/priceHerre.html"
+                                            >
+                                                Herre
+                                            </v-btn>
+                                        </v-list-item>
+                                        <v-list-item>
+                                            <v-btn
+                                                   depressed
+                                                   class="text-capitalize"
+                                                   style="background-color: white"
+                                                   href="index.html"
+                                            >
+                                                Dame
+                                            </v-btn>
+                                        </v-list-item>
+                                        <v-list-item>
+                                            <v-btn
+                                                   depressed
+                                                   class="text-capitalize"
+                                                   style="background-color: white"
+                                                   href="index.html"
+                                            >
+                                                Diverse
+                                            </v-btn>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                            </li>
+                        
+                        <li><v-btn class="text-capitalize" href="https://salonbook.one/?salon-cheri#/">Book tid</v-btn></li>
+                    </ul>
+
+                    <div  class="right hide-on-med-and-up">
+                    <v-menu offset-y >
+                        <template v-slot:activator="{ on }">
+                            <v-btn
+                                    v-on="on"
+                                    depressed
+                                    class="text-capitalize"
+                                    style="background-color: white"
+                            >
+                                <v-img class="bar" src="../assest/bars-solid.svg" alt=""></v-img>
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item>
+                                <v-btn
+                                        depressed
+                                        class="text-capitalize"
+                                        style="background-color: white"
+                                        href="index.html"
+                                >
+                                    Galleri
+                                </v-btn>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-menu  open-on-hover top>
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn  v-on="on"
+                                               depressed
+                                               class="text-capitalize"
+                                               style="background-color: white">
+                                            Priser
+                                        </v-btn>
+                                    </template>
+                                    <v-list>
+                                        <v-list-item >
+                                            <v-btn
+                                                    depressed
+                                                    class="text-capitalize"
+                                                    style="background-color: white"
+                                                    href="html/priceHerre.html"
+                                            >
+                                                Herre
+                                            </v-btn>
+                                        </v-list-item>
+                                        <v-list-item>
+                                            <v-btn
+                                                    depressed
+                                                    class="text-capitalize"
+                                                    style="background-color: white"
+                                                    href="index.html">
+                                                Dame
+                                            </v-btn>
+                                        </v-list-item>
+                                        <v-list-item>
+                                            <v-btn
+                                                    depressed
+                                                    class="text-capitalize"
+                                                    style="background-color: white"
+                                                    href="index.html">
+                                               Diverse
+                                            </v-btn>
+                                        </v-list-item>
+                                    </v-list>
+                                </v-menu>
+                            </v-list-item>
+                            <v-list-item>
+                                <v-btn
+                                        depressed
+                                        class="text-capitalize"
+                                        style="background-color: white"
+                                        href="https://salonbook.one/?salon-cheri#/"
+                                >
+                                    Book tid
+                                </v-btn>
+                            </v-list-item>
+                        </v-list>
+                    </v-menu>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div style="background-color: white">
+            <v-container >
+            <v-row>
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                    <v-card flat class="placeTag" v-on="on" >
+                        <v-img src="../assest/lady.png" alt="" ></v-img>
+                        <v-btn class="nameTag">
+                            Damer
+                        </v-btn>
+                    </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs(-1)">&#10094;</button>
+                                <img class="mySlides" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-card flat class="placeTag" v-on="on" >
+                                <v-img src="../assest/kids.png" alt="" ></v-img>
+                                <v-btn class="nameTag">
+                                    Børn
+                                </v-btn>
+                            </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs1(-1)">&#10094;</button>
+                                <img class="mySlides1" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides1 mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides1 mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs1(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-card flat class="placeTag" v-on="on" >
+                                <v-img src="../assest/herre.png" alt="" ></v-img>
+                                <v-btn class="nameTag">
+                                    Herre
+                                </v-btn>
+                            </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs2(-1)">&#10094;</button>
+                                <img class="mySlides2" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides2  mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides2  mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs2(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+            </v-row>
+
+            <v-row>
+
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-card flat class="placeTag" v-on="on" >
+                                <v-img src="../assest/diverse.png" alt="" ></v-img>
+                                <v-btn class="nameTag">
+                                    Diverse
+                                </v-btn>
+                            </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs3(-1)">&#10094;</button>
+                                <img class="mySlides3" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides3  mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides3  mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs3(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-card flat class="placeTag" v-on="on" >
+                                <v-img src="../assest/diverse2.png" alt="" ></v-img>
+                                <v-btn class="nameTag">
+                                    Diverse 2
+                                </v-btn>
+                            </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs4(-1)">&#10094;</button>
+                                <img class="mySlides4" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides4  mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides4  mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs4(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+
+                <v-col md="4" >
+                    <v-dialog
+                            v-model="dialog"
+                            width="40%"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-card flat class="placeTag" v-on="on" >
+                                <v-img src="../assest/style.png" alt="" ></v-img>
+                                <v-btn class="nameTag">
+                                    Styling
+                                </v-btn>
+                            </v-card>
+                        </template>
+                        <v-card>
+                            <div class="slideContainer">
+                                <button class="arrows" onclick="plusDivs5(-1)">&#10094;</button>
+                                <img class="mySlides5" src="../assest/bluehair.png" style="width:100%">
+                                <img class="mySlides5  mySlidesDisplay" src="../assest/pinkhair.png" style="width:100%">
+                                <img class="mySlides5  mySlidesDisplay" src="../assest/pixel.png" style="width:100%">
+                                <button class="arrows" onclick="plusDivs5(1)">&#10095;</button>
+                            </div>
+                        </v-card>
+                    </v-dialog>
+                </v-col>
+            </v-row>
+            </v-container>
+            </div>
+
+            <footer>
+            <v-row class="vrow">
+                <v-col offset-md="2" md="2" xs="12">
+                    <v-card flat class="vcard">
+                        <v-card-title class="vtitle centers">
+                            <h5>
+                                Salon Cheri
+                            </h5 >
+                        </v-card-title>
+                        <v-card-text  >
+                            <p class="footertext">
+                                Gl. Novrupvej 5
+                                6705 Esbjerg
+                            </p>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+
+                <v-col offset-md="1" md="2" xs="12">
+                    <v-card flat class="vcard">
+                        <v-card-title class="vtitle centers">
+                            <h5 >
+                                Kontakt
+                            </h5 >
+                        </v-card-title>
+                        <v-card-text  >
+                            <p class="footertext">
+                                +45 22 32 48 49  info@saloncheri.dk
+                            </p>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+
+                <v-col offset-md="1" md="2" xs="12">
+                    <v-card flat class="vcard">
+                        <v-card-title class="vtitle centers">
+                            <h5 >
+                                Følg med
+                            </h5 >
+                        </v-card-title>
+                        <v-card-text class="centers" >
+                            <div >
+                                <a target="_blank" href="https://www.facebook.com/saloncheriesbjerg/">   <v-img src="../assest/facebook.svg" alt="" class="icon"></v-img></a>
+                            </div>
+                        </v-card-text>
+                    </v-card>
+                </v-col>
+            </v-row>
+            </footer>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+        })
+    </script>
+
+    <!-- Slide show -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showDivs1(slideIndex);
+
+        function plusDivs1(n) {
+            showDivs1(slideIndex += n);
+        }
+
+        function showDivs1(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides1");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        var slideIndex = 1;
+        showDivs2(slideIndex);
+
+        function plusDivs2(n) {
+            showDivs2(slideIndex += n);
+        }
+
+        function showDivs2(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides2");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs3(slideIndex);
+
+        function plusDivs3(n) {
+            showDivs3(slideIndex += n);
+        }
+
+        function showDivs3(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides3");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs4(slideIndex);
+
+        function plusDivs4(n) {
+            showDivs4(slideIndex += n);
+        }
+
+        function showDivs4(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides4");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs5(slideIndex);
+
+        function plusDivs5(n) {
+            showDivs5(slideIndex += n);
+        }
+
+        function showDivs5(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides5");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+</body>
+
+
+</html>
