@@ -94,7 +94,7 @@
                             <v-card flat class="placeTag" v-on="on" >
                                 <v-img src=<?php the_field('f4') ?> alt="" max-height=430px></v-img>
                                 <v-btn class="nameTag">
-                                    Diverse
+                                    Produkter
                                 </v-btn>
                             </v-card>
                         </template>
@@ -119,7 +119,7 @@
                             <v-card flat class="placeTag" v-on="on" >
                                 <v-img src=<?php the_field('f5') ?> alt="" max-height=430px></v-img>
                                 <v-btn class="nameTag">
-                                    Diverse 2
+                                    Salon
                                 </v-btn>
                             </v-card>
                         </template>
